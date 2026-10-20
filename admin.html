@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard — Shuddhi HiiMS</title>
+  <link rel="stylesheet" href="css/root.css">
+  <link rel="stylesheet" href="css/admin.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='14' fill='%232D5E1E'/><text y='22' x='8' font-size='16' fill='white'>S</text></svg>">
+</head>
+<body>
+
+  <!-- ADMIN LOGIN PAGE -->
+  <div class="admin-login-page">
+    <div class="login-pattern"></div>
+    <div class="admin-login-card">
+      <div class="admin-login-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+          <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+        </svg>
+      </div>
+      <h2>Admin Login</h2>
+      <p>Enter the admin password to manage content</p>
+      <form id="adminLoginForm">
+        <div class="form-group">
+          <label for="adminPassword">Password</label>
+          <input type="password" id="adminPassword" placeholder="Enter admin password" required autocomplete="current-password">
+        </div>
+        <p class="login-error">Incorrect password. Please try again.</p>
+        <button type="submit" class="btn btn-primary">Sign In</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ADMIN DASHBOARD PANEL -->
+  <div class="admin-dashboard">
+    <!-- Sidebar -->
+    <aside class="admin-sidebar" id="adminSidebar">
+      <div class="admin-sidebar-header">
+        <h3>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          Shuddhi HiiMS
+        </h3>
+        <p>Content Management</p>
+      </div>
+      <nav class="admin-nav">
+        <div class="admin-nav-item active" data-section="carousel">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 10h20"/></svg>
+          Carousel Images
+        </div>
+        <div class="admin-nav-item" data-section="videos">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+          Videos
+        </div>
+        <div class="admin-nav-item" data-section="audio">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18V5l12-2v13"></path><circle cx='6' cy='18' r='3'></circle><circle cx='18' cy='16' r='3'></circle></svg>
+          Audio
+        </div>
+        <div class="admin-nav-item" data-section="texts">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          Articles
+        </div>
+      </nav>
+      <div class="admin-exit-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9"/></svg>
+        Exit to Website
+      </div>
+    </aside>
+
+    <!-- Sidebar backdrop (mobile) -->
+    <div class="admin-sidebar-backdrop"></div>
+
+    <!-- Content Area -->
+    <div class="admin-content">
+      <div class="admin-topbar">
+        <div class="admin-topbar-left">
+          <button class="admin-mobile-toggle">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+          </button>
+          <h2 id="adminSectionTitle">Carousel Images</h2>
+        </div>
+        <a href="index.html" class="btn btn-accent btn-sm">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          Publish &amp; Exit
+        </a>
+      </div>
+
+      <div class="admin-main">
+
+        <!-- CAROUSEL SECTION -->
+        <div class="admin-section active" id="section-carousel">
+          <form class="admin-form" id="form-carousel">
+            <div class="admin-form-header">
+              <h3>Add New Carousel Slide</h3>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Image URL *</label>
+                <input type="url" name="imageUrl" placeholder="https://example.com/image.jpg" required>
+                <span class="form-hint">Direct link to an image (JPG, PNG, WebP)</span>
+              </div>
+              <div class="form-group">
+                <label>Caption / Title *</label>
+                <input type="text" name="caption" placeholder="e.g. Our Hospital Campus" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Description</label>
+                <input type="text" name="description" placeholder="Short description for this slide">
+              </div>
+              <div class="form-group">
+                <label>Display Order</label>
+                <input type="number" name="order" value="1" min="1">
+              </div>
+            </div>
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary">Save Slide</button>
+              <button type="button" class="btn btn-secondary" onclick="cancelEdit('carousel')">Cancel</button>
+            </div>
+          </form>
+
+          <div class="admin-table-container">
+            <div class="admin-table-head">
+              <h4>Existing Slides</h4>
+              <span class="item-count" id="count-carousel">0 items</span>
+            </div>
+            <div id="table-carousel"></div>
+          </div>
+        </div>
+
+        <!-- VIDEOS SECTION -->
+        <div class="admin-section" id="section-videos">
+          <form class="admin-form" id="form-videos">
+            <div class="admin-form-header">
+              <h3>Add New Video</h3>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Video Title *</label>
+                <input type="text" name="title" placeholder="e.g. Introduction to Ayurveda" required>
+              </div>
+              <div class="form-group">
+                <label>Video URL / Embed URL *</label>
+                <input type="url" name="videoUrl" placeholder="https://www.youtube.com/embed/..." required>
+                <span class="form-hint">YouTube embed URL or direct video link</span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Thumbnail Image URL *</label>
+              <input type="url" name="thumbnailUrl" placeholder="https://example.com/thumbnail.jpg" required>
+              <span class="form-hint">Image shown as the video cover (16:9 ratio recommended)</span>
+            </div>
+            <div class="form-group">
+              <label>Description</label>
+              <textarea name="description" placeholder="Brief description of the video content..."></textarea>
+            </div>
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary">Save Video</button>
+              <button type="button" class="btn btn-secondary" onclick="cancelEdit('videos')">Cancel</button>
+            </div>
+          </form>
+
+          <div class="admin-table-container">
+            <div class="admin-table-head">
+              <h4>Existing Videos</h4>
+              <span class="item-count" id="count-videos">0 items</span>
+            </div>
+            <div id="table-videos"></div>
+          </div>
+        </div>
+
+        <!-- AUDIO SECTION -->
+        <div class="admin-section" id="section-audio">
+          <form class="admin-form" id="form-audio">
+            <div class="admin-form-header">
+              <h3>Add New Audio</h3>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Audio Title *</label>
+                <input type="text" name="title" placeholder="e.g. Morning Meditation Guide" required>
+              </div>
+              <div class="form-group">
+                <label>Audio URL</label>
+                <input type="url" name="audioUrl" placeholder="https://example.com/audio.mp3">
+                <span class="form-hint">Direct link to MP3, WAV, or OGG file</span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Description</label>
+              <textarea name="description" placeholder="Brief description of this audio content..."></textarea>
+            </div>
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary">Save Audio</button>
+              <button type="button" class="btn btn-secondary" onclick="cancelEdit('audio')">Cancel</button>
+            </div>
+          </form>
+
+          <div class="admin-table-container">
+            <div class="admin-table-head">
+              <h4>Existing Audio</h4>
+              <span class="item-count" id="count-audio">0 items</span>
+            </div>
+            <div id="table-audio"></div>
+          </div>
+        </div>
+
+        <!-- ARTICLES SECTION -->
+        <div class="admin-section" id="section-texts">
+          <form class="admin-form" id="form-texts">
+            <div class="admin-form-header">
+              <h3>Add New Article</h3>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Article Title *</label>
+                <input type="text" name="title" placeholder="e.g. Benefits of Ayurvedic Detox" required>
+              </div>
+              <div class="form-group">
+                <label>Category *</label>
+                <input type="text" name="category" placeholder="e.g. Wellness, Treatments, Education" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Article Content *</label>
+              <textarea name="body" placeholder="Write the full article content here..." required></textarea>
+            </div>
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary">Save Article</button>
+              <button type="button" class="btn btn-secondary" onclick="cancelEdit('texts')">Cancel</button>
+            </div>
+          </form>
+
+          <div class="admin-table-container">
+            <div class="admin-table-head">
+              <h4>Existing Articles</h4>
+              <span class="item-count" id="count-texts">0 items</span>
+            </div>
+            <div id="table-texts"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="js/shared.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>

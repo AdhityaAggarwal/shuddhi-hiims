@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Watch videos about Ayurvedic treatments, wellness tips, patient stories, and more from Shuddhi HiiMS.">
+  <title>Videos — Shuddhi HiiMS</title>
+  <link rel="stylesheet" href="css/root.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/content.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='14' fill='%232D5E1E'/><text y='22' x='8' font-size='16' fill='white'>S</text></svg>">
+</head>
+<body data-content-type="videos">
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="navbar-logo">
+        <img src="assets/logo.png" alt="Shuddhi HiiMS" onerror="this.style.display='none'">
+        <div class="logo-text">Shuddhi HiiMS<small>Wellness Clinics & Hospitals</small></div>
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="videos.html" class="active">Videos</a>
+        <a href="audio.html">Audio</a>
+        <a href="articles.html">Articles</a>
+      </div>
+      <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+    </div>
+  </nav>
+
+  <!-- BREADCRUMBS -->
+  <nav class="breadcrumbs" aria-label="Breadcrumb">
+    <div class="container">
+      <a href="index.html">Home</a>
+      <svg viewBox="0 0 24 24" class="separator-icon" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>
+      <span>Videos</span>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <div class="content-page-header">
+    <div class="container">
+      <div class="page-icon">
+        <svg viewBox="0 0 24 24"><path d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+      </div>
+      <h1 class="section-title">Videos</h1>
+      <p class="section-subtitle">Explore our collection of videos on Ayurvedic treatments, wellness tips, and patient journeys.</p>
+    </div>
+  </div>
+
+  <!-- CONTENT GRID -->
+  <section class="content-section">
+    <div class="container">
+      <div class="content-grid videos-grid" id="contentGrid"><!-- JS --></div>
+      <div class="pagination" id="pagination"><!-- JS --></div>
+    </div>
+  </section>
+
+  <!-- CROSS REFERENCES -->
+  <section class="cross-references">
+    <div class="container">
+      <div class="cross-references-header">
+        <h3>Explore Other Sections</h3>
+      </div>
+      <div class="cross-references-grid">
+        <a href="audio.html" class="cross-ref-card">
+          <div class="cross-ref-icon-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18V5l12-2v13"></path><circle cx="6" cy="18" r="3"></circle><circle cx="18" cy="16" r="3"></circle></svg>
+          </div>
+          <div class="cross-ref-info">
+            <h4>Listen to Audio</h4>
+            <p>Guided meditations and Ayurvedic wisdom podcasts</p>
+          </div>
+        </a>
+        <a href="articles.html" class="cross-ref-card">
+          <div class="cross-ref-icon-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+          </div>
+          <div class="cross-ref-info">
+            <h4>Read Articles</h4>
+            <p>In-depth wellness tips and remedies written by specialists</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIDEO MODAL -->
+  <div class="video-modal" id="videoModal">
+    <div class="video-modal-inner">
+      <button class="video-modal-close" onclick="closeVideoModal()" aria-label="Close">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+      <div class="video-modal-content"></div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo"><img src="assets/logo.png" alt="" onerror="this.style.display='none'"><span>Shuddhi HiiMS</span></div>
+          <p>India's biggest chain of integrated medicine clinics & hospitals.</p>
+        </div>
+        <div class="footer-col"><h4>Quick Links</h4><a href="index.html">Home</a><a href="videos.html">Videos</a><a href="audio.html">Audio</a><a href="articles.html">Articles</a></div>
+        <div class="footer-col"><h4>Treatments</h4><a href="#">Panchakarma</a><a href="#">Yoga Therapy</a><a href="#">Diet Consultation</a><a href="#">Herbal Medicine</a></div>
+        <div class="footer-col"><h4>Contact</h4><a href="#">info@shuddhihiims.com</a><a href="#">+91 1800-XXX-XXXX</a><a href="#">Chandigarh, India</a></div>
+      </div>
+      <div class="footer-bottom"><span>&copy; 2024 Shuddhi HiiMS. All rights reserved.</span><span>Built for holistic health</span></div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTopBtn" aria-label="Scroll to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
+
+  <script src="js/shared.js"></script>
+  <script src="js/content.js"></script>
+</body>
+</html>

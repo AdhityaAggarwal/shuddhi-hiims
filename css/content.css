@@ -1,0 +1,439 @@
+/* ==========================================
+   SHUDDHI HIIMS — Content Page Styles
+   Shared by videos.html, audio.html, articles.html
+   ========================================== */
+
+/* =========================================
+   PAGE HEADER
+   ========================================= */
+.content-page-header {
+  padding: 3.5rem 0;
+  background: linear-gradient(
+    160deg,
+    var(--primary) 0%,
+    var(--primary-dark) 100%
+  );
+  color: var(--bg-main);
+  text-align: center;
+}
+
+.content-page-header .section-title {
+  color: var(--bg-main);
+}
+.content-page-header .section-subtitle {
+  color: rgba(247, 245, 240, 0.7);
+}
+
+.content-page-header .page-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  background: rgba(232, 146, 45, 0.15);
+  border: 1px solid rgba(232, 146, 45, 0.3);
+  border-radius: var(--radius-md);
+  margin-bottom: 1.25rem;
+}
+
+.content-page-header .page-icon svg {
+  width: 28px;
+  height: 28px;
+  stroke: var(--accent);
+  fill: none;
+  stroke-width: 1.5;
+}
+
+/* =========================================
+   CONTENT GRID
+   ========================================= */
+.content-section {
+  padding: 3rem 0 4rem;
+}
+
+.content-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+/* Video grid */
+.content-grid.videos-grid {
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+}
+
+/* Audio grid */
+.content-grid.audio-grid {
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+}
+
+/* Text grid */
+.content-grid.text-grid {
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+}
+
+/* Card styles — reuse from home.css (imported on content pages too) */
+/* Video, audio, text cards share the same styles defined in home.css */
+
+/* Audio player on full content pages */
+.audio-card .audio-player-wrapper {
+  margin-top: 0.75rem;
+}
+
+.audio-card audio {
+  width: 100%;
+  height: 36px;
+  border-radius: 18px;
+}
+
+audio::-webkit-media-controls-panel {
+  background: var(--green-tint);
+  border-radius: 18px;
+}
+
+/* =========================================
+   PAGINATION
+   ========================================= */
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 2.5rem 0 1rem;
+}
+
+.pagination-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  height: 40px;
+  padding: 0 12px;
+  border-radius: var(--radius-sm);
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+.pagination-btn:hover {
+  background: var(--green-tint);
+  border-color: var(--primary-light);
+  color: var(--primary);
+}
+
+.pagination-btn.active {
+  background: var(--primary);
+  color: var(--bg-main);
+  border-color: var(--primary);
+}
+
+.pagination-btn.disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.pagination-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+.pagination-info {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-left: 1rem;
+}
+
+/* =========================================
+   VIDEO MODAL
+   ========================================= */
+.video-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.92);
+  z-index: 2000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.video-modal.active {
+  display: flex;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.video-modal-inner {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+}
+
+.video-modal-content {
+  width: 100%;
+  aspect-ratio: 16/9;
+  background: #000;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.video-modal-content iframe,
+.video-modal-content video {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.video-modal-close {
+  position: absolute;
+  top: -48px;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--bg-main);
+  cursor: pointer;
+  border-radius: 50%;
+  transition: all var(--transition);
+}
+
+.video-modal-close:hover {
+  color: var(--accent);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.video-modal-close svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* =========================================
+   TEXT DETAIL MODAL
+   ========================================= */
+.text-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(8px);
+  z-index: 2000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.text-modal.active {
+  display: flex;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.text-modal-content {
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  max-width: 700px;
+  width: 100%;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+  animation: slideUp 0.35s ease-out;
+}
+
+.text-modal-content .text-category {
+  margin-bottom: 0.75rem;
+}
+
+.text-modal-content h2 {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+  color: var(--text-primary);
+}
+
+.text-modal-content .text-body {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  white-space: pre-line;
+}
+
+.text-modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--green-tint);
+  border-radius: 50%;
+  cursor: pointer;
+  color: var(--text-primary);
+  transition: all var(--transition);
+}
+
+.text-modal-close:hover {
+  background: var(--accent);
+  color: #fff;
+}
+.text-modal-close svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* =========================================
+   BREADCRUMBS
+   ========================================= */
+.breadcrumbs {
+  background: var(--bg-card);
+  border-bottom: 1px solid var(--border-light);
+  padding: 12px 0;
+  margin-top: var(--navbar-height);
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+}
+
+.breadcrumbs .container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.breadcrumbs a {
+  font-weight: 500;
+}
+
+.breadcrumbs a:hover {
+  color: var(--primary);
+}
+
+.breadcrumbs span {
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+.breadcrumbs .separator-icon {
+  width: 10px;
+  height: 10px;
+  stroke: var(--text-muted);
+  flex-shrink: 0;
+}
+
+/* =========================================
+   CROSS REFERENCES
+   ========================================= */
+.cross-references {
+  background: var(--green-tint);
+  padding: 3.5rem 0;
+  border-top: 1px solid var(--border);
+}
+
+.cross-references-header {
+  text-align: center;
+  margin-bottom: 1.75rem;
+}
+
+.cross-references-header h3 {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.cross-references-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cross-ref-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  transition: all var(--transition);
+}
+
+.cross-ref-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--primary-light);
+  box-shadow: var(--shadow-md);
+}
+
+.cross-ref-icon-box {
+  width: 40px;
+  height: 40px;
+  background: var(--green-tint);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.cross-ref-icon-box svg {
+  width: 18px;
+  height: 18px;
+  stroke: var(--primary);
+  fill: none;
+  stroke-width: 2;
+}
+
+.cross-ref-info {
+  flex: 1;
+}
+
+.cross-ref-info h4 {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 2px;
+}
+
+.cross-ref-info p {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+}
+
+/* =========================================
+   RESPONSIVE — Content Pages
+   ========================================= */
+@media (max-width: 768px) {
+  .content-page-header {
+    padding: 3rem 0;
+  }
+  .content-grid.videos-grid {
+    grid-template-columns: 1fr;
+  }
+  .content-grid.audio-grid {
+    grid-template-columns: 1fr;
+  }
+  .content-grid.text-grid {
+    grid-template-columns: 1fr;
+  }
+  .text-modal-content {
+    padding: 1.5rem;
+  }
+  .video-modal {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .cross-references-grid {
+    grid-template-columns: 1fr;
+  }
+}

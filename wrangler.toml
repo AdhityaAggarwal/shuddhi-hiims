@@ -1,0 +1,24 @@
+# ==========================================
+# SHUDDHI HIIMS — Cron Worker Configuration
+# Deploy with: npx wrangler deploy
+# ==========================================
+
+name = "cron-updater"
+main = "cron-worker.js"
+compatibility_date = "2024-01-01"
+
+# ─── Cron Trigger: every 2 hours ───
+[triggers]
+crons = ["0 */2 * * *"]
+
+# ─── KV Namespace Binding ───
+# Replace <YOUR_KV_NAMESPACE_ID> with the actual ID from Cloudflare dashboard
+[[kv_namespaces]]
+binding = "PENDING_DATA"
+id = "<YOUR_KV_NAMESPACE_ID>"
+
+# ─── Environment Variables ───
+# Set these as secrets via: npx wrangler secret put <NAME>
+# GITHUB_TOKEN  — Personal Access Token with `repo` scope
+# GITHUB_REPO   — e.g. "username/shuddhi-hiims"
+# GITHUB_BRANCH — e.g. "main"

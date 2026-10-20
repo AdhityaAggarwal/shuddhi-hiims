@@ -1,0 +1,95 @@
+{
+  "carousel": [
+    {
+      "id": "c1",
+      "order": 1,
+      "imageUrl": "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=1200&h=675&fit=crop",
+      "caption": "World-Class Ayurvedic Hospital",
+      "description": "India's biggest chain of integrated medicine clinics & hospitals"
+    },
+    {
+      "id": "c2",
+      "order": 2,
+      "imageUrl": "https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=1200&h=675&fit=crop",
+      "caption": "State-of-the-Art Facilities",
+      "description": "Modern infrastructure meets ancient healing wisdom"
+    },
+    {
+      "id": "c3",
+      "order": 3,
+      "imageUrl": "https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=1200&h=675&fit=crop",
+      "caption": "Natural Ayurvedic Remedies",
+      "description": "Pure herbs and traditional formulations for holistic wellness"
+    },
+    {
+      "id": "c4",
+      "order": 4,
+      "imageUrl": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1200&h=675&fit=crop",
+      "caption": "Yoga & Wellness Programs",
+      "description": "Comprehensive health programs combining yoga, diet, and Ayurveda"
+    }
+  ],
+  "videos": [
+    {
+      "id": "v1",
+      "title": "Welcome to Shuddhi HiiMS",
+      "description": "An introduction to our world-class Ayurvedic hospital and the treatments we offer for holistic wellness.",
+      "thumbnailUrl": "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=600&h=340&fit=crop",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+    },
+    {
+      "id": "v2",
+      "title": "Understanding Panchakarma Therapy",
+      "description": "Learn about the ancient five-fold purification therapy that detoxifies and rejuvenates your entire body.",
+      "thumbnailUrl": "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=600&h=340&fit=crop",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+    },
+    {
+      "id": "v3",
+      "title": "Patient Success Stories",
+      "description": "Real stories from patients who found healing through Ayurveda after years of chronic ailments.",
+      "thumbnailUrl": "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&h=340&fit=crop",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+    }
+  ],
+  "audio": [
+    {
+      "id": "a1",
+      "title": "Daily Ayurvedic Health Tips",
+      "description": "Quick morning routine tips based on Ayurvedic principles for a healthier lifestyle.",
+      "audioUrl": ""
+    },
+    {
+      "id": "a2",
+      "title": "Guided Meditation for Healing",
+      "description": "A calming 10-minute guided meditation to promote inner peace and accelerate healing.",
+      "audioUrl": ""
+    },
+    {
+      "id": "a3",
+      "title": "Understanding Your Dosha",
+      "description": "Learn about Vata, Pitta, and Kapha doshas and discover your unique body constitution.",
+      "audioUrl": ""
+    }
+  ],
+  "texts": [
+    {
+      "id": "t1",
+      "title": "What is Ayurveda? — The Science of Life",
+      "category": "Education",
+      "body": "Ayurveda is one of the world's oldest holistic healing systems, developed more than 5,000 years ago in India. It is based on the belief that health and wellness depend on a delicate balance between the mind, body, and spirit.\n\nThe primary focus of Ayurveda is to promote good health rather than fight disease. At Shuddhi HiiMS, we combine this ancient wisdom with modern diagnostic techniques."
+    },
+    {
+      "id": "t2",
+      "title": "Benefits of Panchakarma Detox",
+      "category": "Treatments",
+      "body": "Panchakarma is a Sanskrit word meaning \"five actions\" or \"five treatments.\" It is a process used to clean the body of toxic materials left by disease, poor nutrition, and environmental toxins.\n\nOur experts at Shuddhi HiiMS customize each Panchakarma program based on individual health needs."
+    },
+    {
+      "id": "t3",
+      "title": "5 Ayurvedic Herbs You Should Know",
+      "category": "Wellness",
+      "body": "1. Ashwagandha — Known as Indian Ginseng, it helps reduce stress and anxiety while boosting immunity.\n\n2. Turmeric (Haldi) — A powerful anti-inflammatory and antioxidant.\n\n3. Tulsi (Holy Basil) — Excellent for respiratory health and stress relief.\n\n4. Triphala — Aids digestion and detoxification.\n\n5. Brahmi — Improves memory, concentration, and cognitive function."
+    }
+  ]
+}
